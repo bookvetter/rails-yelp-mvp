@@ -1,2 +1,11 @@
 <h1>Restaurants#show</h1>
 <p>Find me in app/views/restaurants/show.html.erb</p>
+
+<%= simple_form_for(@restaurant) do |f| %>
+    <p> Restaurant name<%= f.input :name %></p>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :category %>
+
+<%= link_to "Home", restaurants_path, class: "btn btn-primary" %>
+  <% end %>
